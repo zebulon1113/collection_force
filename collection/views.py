@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse,HttpResponseRedirect,JsonResponse
 from django.conf import settings
+from django.db import transaction
 import json
 import logging
 
@@ -42,6 +43,7 @@ def share(request):
         return HttpResponseRedirect('/login/weixin/?next=share?id='+id)
 
 
+@transaction.atomic
 @require_http_methods(['POST'])
 @csrf_exempt
 def update_force(request):
@@ -64,7 +66,7 @@ def update_force(request):
     person.save()
     return JsonResponse({'personId':person.id}, status=200)
 
-
+@transaction.atomic
 @require_http_methods(['POST'])
 @csrf_exempt
 def reward(request):
@@ -76,14 +78,22 @@ def reward(request):
         return JsonResponse({'message':'you have drawed!'},status=400)
     try:
         person = Person.objects.get(user=user)
+        if person.drawed:
+            return JsonResponse({'message':'you have drawed!'},status=400)
         if person.force < 100:
             return JsonResponse({'message':'your force is not enough!'},status=400)
         else:
-            reward_type = random.choice(['dataLine','storageBox','Upan'])
-            reward = Reward.objects.filter(type=reward_type)
-            DrawRecord.objects.create(user=user,reward=reward)
-            reward.remain = reward.remain - 1
-            reward.save()
+            person.drawed = True
+            person.save()
+            rewards = ['dataLine','storageBox','Upan']
+            for i in range[27]: #十分之一的中奖概率
+                rewards.append('none')
+            reward_type = random.choice(rewards)
+            if reward_type != 'none':
+                reward = Reward.objects.filter(type=reward_type)
+                DrawRecord.objects.create(user=user,reward=reward)
+                reward.remain = reward.remain - 1
+                reward.save()
             return JsonResponse({'reward':reward_type},status=200)
     except:
         return JsonResponse({'message':'no person'},status=400)

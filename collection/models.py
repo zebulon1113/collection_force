@@ -9,6 +9,7 @@ class Person(models.Model):
     address = models.CharField(max_length=100)
     force = models.IntegerField(u'原力值',default=0)
     add_user = models.ManyToManyField(User,related_name='add_user')#增加原力的人
+    drawed = models.BooleanField(u'是否抽过奖',default=False)
 
 
 #class ForceRecord(models.Model):
