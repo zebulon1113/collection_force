@@ -1,0 +1,496 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	background: #050505;
+	height: 100%;
+}
+@font-face {
+ font-family: 'RTWSYueGoTrial-Regular';
+ src: url('../img/RTWSYueGoTrial-Regular.otf');
+}
+body {
+	font-family:'RTWSYueGoTrial-Regular';
+}
+div{
+	background-repeat: no-repeat;
+}
+.container{
+	position: relative;
+	width: 100%;
+	padding: 0px;
+}
+.cartoon{
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;
+	-moz-animation-duration: 1.5s;
+	position: absolute;
+	background: url(../img/2.jpg);
+	background-size: 100% 100%;
+}
+.cartoonGif{
+	display: none;
+	position: absolute;
+	background: url(../img/1.gif);
+	background-size: 100% 100%;
+}
+.cartoonBg{
+	display: none;
+	position: absolute;
+	background-image: url(../img/bg.gif);
+	background-size: 100% 100%;
+}
+.boat1,
+.boat2,
+.boat3,
+.boat4,
+.boat5,
+.boat6,
+.boat7,
+.boat8,
+.boat9{
+	position: absolute;
+	display: none;	
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+}
+.boat1{
+	top: 10%;
+	left: 0px;
+	right: 0px;
+	width: 80%;
+	margin: auto;
+}
+.boat2{
+	top: 11%;
+    left: 1%;
+    width: 25%;
+}
+.boat3{
+	top: 1%;
+    left: 10%;
+    width: 25%;
+}
+.boat4{
+	top: 2%;
+    right: 1%;
+    width: 20%;
+}
+.boat5{
+	top: 64%;
+    left: 5%;
+    width: 30%;
+}
+.boat6{
+	top: 24%;
+    right: 3%;
+    width: 25%;
+}
+.boat7{
+	top: 68%;
+    right: 10%;
+    width: 16%;
+}
+.boat8{
+	top: 61%;
+    right: 1%;
+    width: 22%;
+}
+.boat9{
+	top: 60%;
+    left: 5%;
+    right: -10px;
+    width: 15%;
+}
+.cartoonTitle{
+	position: absolute;
+	display: none;
+	width: 100%;
+	top: 28%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+}
+.cartoonBtn{
+	position: absolute;
+	display: none;
+	bottom: 1%;
+	width: 60%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+}
+.second1{
+	display: none;
+	position: absolute;
+	background: url(../img/2.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.page3{
+	background: url(../img/4-bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.page2{
+	background: url(../img/3-bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.pangzi{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin:  auto;
+	width: 95%;
+}
+.keai{
+	position: absolute;
+    bottom: 2%;
+    width: 30%;
+    right: 0px;
+    animation: bounce 2s infinite !important;
+    -webkit-animation: bounce 2s infinite !important;
+}
+.page4{
+	background: url(../img/5-bg.gif);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.page5{
+	background: url(../img/6-bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.page6{
+	background: url(../img/8-bg.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.page7{
+	background: url(../img/8-2.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.page5-bg{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.9);
+	display: none;
+}
+.page6 form{
+	width: 300px;
+    height: 290px;
+    background: url(../img/juxing.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0px;
+    margin: auto;
+    right: 0px;
+    top: 90px;
+    bottom: 0px;
+    padding-top: 30px;
+}
+.page6-txt{
+	background: url(../img/8_3.png);
+    width: 300px;
+    background-size: 100% 100%;
+    height: 150px;
+    margin-top: 20px;
+    position: relative;
+}
+.page6-contain{
+	position: absolute;
+	bottom: 12px;
+    right: 40px;
+}
+#page6-info{
+	background: rgba(255,255,255,0.3);
+    border: none;
+    color: #13f1f8;
+    text-align: center;
+    -webkit-appearance: none;
+}
+.page6-contain p{
+	color: #13f1f8;
+	margin-bottom: 6px;
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border: none;
+}
+.page6 form input{
+	background: #00192a;
+	border: 1px solid #3d9fc0;
+	color:#0a8591;
+	text-align: center;
+	width: 70%;
+	height: 28px;
+}
+.page6 form p{
+	color: #13f1f8;
+	margin: 10px 0px;
+}
+#sub{
+	background: url(../img/sub.png) no-repeat;
+    border: none;
+    height: 60px;
+    background-size: 100% 100%;
+    width: 150px;
+    margin-top: 25px;
+}
+.page6-1{
+	position: absolute;
+    bottom: 18%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    width: 287px;
+    height: 16px;
+    border: 1px solid #69ecf6;
+    background: #000000;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    line-height: 0px;
+    color: #69ecf6;
+    font-size: 16px;
+    overflow: hidden;
+}
+.page6-5,
+.page6-6{
+	display: none;
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.progress{
+	width: 0%;
+    height: 16px;
+    background: #69ecf6;
+    margin-bottom: 0px;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    transition: width 1s;
+	-moz-transition: width 1s; 
+	-webkit-transition: width 1s; 
+	-o-transition: width 1s;
+}
+.page6-2{
+	width: 70%;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+.page6-3{
+	position: absolute;
+    bottom: 5%;
+    left: 6%;
+    width: 40%;
+}
+.page6-4{
+	position: absolute;
+    bottom: 5%;
+    right: 6%;
+    width: 40%;
+}
+.page2-1{
+	position: absolute;
+	width: 40%;
+    top: 9%;
+    left: 4%;
+}
+.page2-1-2{
+	position: absolute;
+	width: 40%;
+    top: 9%;
+    left: 4%;
+    display: block;
+}
+.page2-2{
+	position: absolute;
+	width: 44.25%;
+	top: 9%;
+    right: 0%;
+    display: none;
+}
+.page2-2-2{
+	position: absolute;
+	width: 44.25%;
+	top: 9%;
+    right: 0%;
+    display: block;
+}
+.page2-3{
+	position: absolute;
+    width: 25%;
+    bottom: 1%;
+    right: 0%;
+}
+.page2-4{
+	position: absolute;
+	bottom: 5%;
+	left: 1%;
+	background: url(../img/1_03.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 280px;
+	height: 120px;
+	z-index: 10;
+	display: none;
+}
+.page3-4{
+	position: absolute;
+	bottom: 5%;
+	left: 1%;
+	background: url(../img/2_03.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 280px;
+	height: 110px;
+	z-index: 10;
+}
+.page2-5{
+	position: absolute;
+	bottom: 2%;
+	left: 1%;
+	background: url(../img/2_03.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	width: 280px;
+	height: 170px;
+	z-index: 10;
+	
+}
+.page3-4 h1,
+.page2-4 h1,
+.page2-5 h1{
+	color: #13f1f8;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	margin: 0px;
+	margin-top: 8px;
+    margin-bottom: 6px;
+    width: 160px;
+    margin-left: 60px;
+    margin-top: 36px;
+}
+.page3-4 h4,
+.page2-4 h4,
+.page2-5 h4{
+	color: #13f1f8;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	margin: 0px;
+	margin-left: 60px;
+
+}
+.page3-4 p,
+.page2-4 p,
+.page2-5 p{
+	color: #13f1f8;
+	font-size: 10px !important;
+	font-weight: normal;
+	line-height: 16px;
+	text-align: left;
+	margin: 0px;
+	width: 220px;
+	margin-left: 60px;
+}
+.page5-2{
+	position: absolute;
+    bottom: 32%;
+    width: 10%;
+    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+    left: 1%;
+}
+#music_btn2{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1000;
+}
+@keyframes rotate{
+	from {transform:rotate(0deg);
+-ms-transform:rotate(0deg); 	/* IE 9 */
+-moz-transform:rotate(0deg); 	/* Firefox */
+-webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+-o-transform:rotate(0deg); }
+	to {transform:rotate(360deg);
+-ms-transform:rotate(360deg); 	/* IE 9 */
+-moz-transform:rotate(360deg); 	/* Firefox */
+-webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+-o-transform:rotate(360deg); }
+}
+
+
+
+
+
+//tab
+.fullPage-wp{   
+    -webkit-transform: translate3d(0,0,0);     
+    transform: translate3d(0,0,0);     
+}
+.fullPage-wp:after {
+    display: block;
+    content: ' ';
+    height: 0;
+    clear: both;
+}
+.fullPage-wp.anim{
+    -webkit-transition: all 500ms ease-out 0s;
+    transition: all 500ms ease-out 0s; 
+}
+.fullPage-page{
+    display: block;
+    overflow: hidden;
+}
+
+.fullPage-dir-h {
+    float: left;
+}
+
+@media only screen and  (max-width: 320px) {
+	.page6-2 {
+    width: 66%;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    }
+    .page6-txt{
+    	height: 128px;
+    	width: 280px;
+    	margin-top: 0px;
+    }
+}
